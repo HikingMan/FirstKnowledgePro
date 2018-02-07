@@ -1,0 +1,17 @@
+{
+    "id": "115",
+    "name": "小明",
+    "age": 10,
+    "grades": [
+               {
+               "chinese": 70,
+               "math": "良",
+               "english": 80
+               },
+               {
+               "chinese": 80,
+               "math": "优",
+               "english": 90
+               }
+               ]
+}

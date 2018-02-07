@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2VX-9i-DII">
+                                <rect key="frame" x="60" y="200" width="255" height="267"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aip-2R-AOR">
+                                        <rect key="frame" x="20" y="20" width="215" height="227"/>
+                                        <color key="backgroundColor" red="1" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5d-ir-v3b">
+                                        <rect key="frame" x="42.5" y="70" width="170" height="127.5"/>
+                                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="d5d-ir-v3b" secondAttribute="height" multiplier="4:3" id="9hP-J9-3g1"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.54552848769999995" blue="0.222303103" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="d5d-ir-v3b" firstAttribute="width" secondItem="2VX-9i-DII" secondAttribute="width" multiplier="2:3" id="6VK-ik-EmZ"/>
+                                    <constraint firstItem="d5d-ir-v3b" firstAttribute="centerY" secondItem="2VX-9i-DII" secondAttribute="centerY" id="87X-vN-WDX"/>
+                                    <constraint firstItem="aip-2R-AOR" firstAttribute="leading" secondItem="2VX-9i-DII" secondAttribute="leading" constant="20" id="Qpz-vl-TRS"/>
+                                    <constraint firstAttribute="bottom" secondItem="aip-2R-AOR" secondAttribute="bottom" constant="20" id="VXN-Ig-z0J"/>
+                                    <constraint firstItem="d5d-ir-v3b" firstAttribute="centerX" secondItem="2VX-9i-DII" secondAttribute="centerX" id="Zmu-f4-ceS"/>
+                                    <constraint firstItem="aip-2R-AOR" firstAttribute="top" secondItem="2VX-9i-DII" secondAttribute="top" constant="20" id="jdF-sm-tS9"/>
+                                    <constraint firstAttribute="trailing" secondItem="aip-2R-AOR" secondAttribute="trailing" constant="20" id="plh-y0-Pwu"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3py-Dl-AaL" appends="YES" id="eRN-Lv-7aD"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yt-jI-gTQ">
+                                <rect key="frame" x="116" y="140" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Mg-Eg-aw3"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minepic" translatesAutoresizingMaskIntoConstraints="NO" id="81e-0E-UEw">
+                                <rect key="frame" x="46" y="487" width="11" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bkn-L6-A2B"/>
+                                    <constraint firstAttribute="width" constant="11" id="gX6-tV-b8e"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2VX-9i-DII" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="44" id="114-j5-ZAn"/>
+                            <constraint firstItem="81e-0E-UEw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="2Ai-5m-BSm"/>
+                            <constraint firstItem="9yt-jI-gTQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="3Om-73-abG"/>
+                            <constraint firstItem="2VX-9i-DII" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="180" id="5Xo-fh-jvi"/>
+                            <constraint firstItem="2VX-9i-DII" firstAttribute="top" secondItem="9yt-jI-gTQ" secondAttribute="bottom" constant="30" id="I7Q-rH-jg6"/>
+                            <constraint firstItem="2VX-9i-DII" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mj7-Hc-M7j"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="9yt-jI-gTQ" secondAttribute="trailing" id="N6j-dk-RRR"/>
+                            <constraint firstItem="81e-0E-UEw" firstAttribute="top" secondItem="2VX-9i-DII" secondAttribute="bottom" constant="20" id="Yhn-Qe-MyX"/>
+                            <constraint firstItem="2VX-9i-DII" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yuy-Ya-yYp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="testButton" destination="9yt-jI-gTQ" id="PQD-uO-7Te"/>
+                        <outlet property="testView" destination="2VX-9i-DII" id="2tc-1G-xzB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3py-Dl-AaL">
+                    <connections>
+                        <action selector="testViewTaped:" destination="BYZ-38-t0r" id="aFV-Z3-9hU"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-78" y="-645"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="minepic" width="11" height="21"/>
+    </resources>
+</document>
