@@ -11,6 +11,8 @@
 #import "MyURLProtocol.h"
 
 #import "NATestFirstViewController.h"
+#import "TestJSCoreViewController.h"
+#import "AssistViewController.h"
 
 @interface AppDelegate ()
 
@@ -26,10 +28,16 @@
     
     
     NATestFirstViewController *naTF = [[NATestFirstViewController alloc]init];
-    
+
     UINavigationController *na = [[UINavigationController alloc]initWithRootViewController:naTF];
 
     self.window.rootViewController = na;
+    
+//    AssistViewController *testJSCVC = [[AssistViewController alloc]init];
+//    
+//    UINavigationController *na = [[UINavigationController alloc]initWithRootViewController:testJSCVC];
+//    self.window.rootViewController = na;
+    
     [self.window makeKeyAndVisible];
     
     // Override point for customization after application launch.

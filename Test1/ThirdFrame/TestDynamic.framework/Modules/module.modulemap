@@ -1,0 +1,6 @@
+framework module TestDynamic {
+  umbrella header "TestDynamic.h"
+
+  export *
+  module * { export * }
+}

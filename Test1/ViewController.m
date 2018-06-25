@@ -15,6 +15,9 @@
 
 #import <mach/machine.h>
 
+#import "TrySecondViewController.h"
+
+
 
 typedef void(^TestBlcok)(BOOL isIn);
 @interface ViewController ()
@@ -48,6 +51,7 @@ typedef void(^TestBlcok)(BOOL isIn);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.testLable.text=@"生生灯火明暗无辄，看着迂回的伤痕却不能为你做什么，我恨我，躲在永夜的背后，找微光的出口；生生你我离别无辄，每一道岁月的痛，眼泪自答自问，眼前是永昼的颠簸";
     self.testLable.numberOfLines=0;
 
@@ -55,10 +59,10 @@ typedef void(^TestBlcok)(BOOL isIn);
     NSString *str1 = @"111";
     NSString *str2 = [str1 copy];
     
-//    NSLog(@"%p====%p",str1,str2);
-//
-//    str2 = @"222";
-//    NSLog(@"%p",str2);
+    NSLog(@"%p====%p",str1,str2);
+
+    str2 = @"222";
+    NSLog(@"%p",str2);
     
     NSMutableArray *array1 = [[NSMutableArray alloc]initWithObjects:@"11",@"22", nil];
     NSArray *array2 = [array1 mutableCopy];
@@ -74,11 +78,21 @@ typedef void(^TestBlcok)(BOOL isIn);
     [self myTest];
     
     
-    
 
     
     
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    
+    [super viewDidAppear:animated];
+    
+//    UIStoryboard *story = [UIStoryboard storyboardWithName:@"TryFirst" bundle:nil];
+//    TrySecondViewController *vc = [story instantiateViewControllerWithIdentifier:@"TrySecond"];
+//    UINavigationController *na = [[UINavigationController alloc]initWithRootViewController:vc];
+//    [self presentViewController:na animated:YES completion:nil];
+
 }
 
 
@@ -126,11 +140,10 @@ typedef void(^TestBlcok)(BOOL isIn);
 //    StartEndViewController * seVC = [StartEndViewController new];
 //
 //    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:seVC animated:YES completion:nil];
-
+    
     
     NSLog(@"testView被点击了");
 }
-
 
 
 
@@ -143,6 +156,50 @@ typedef void(^TestBlcok)(BOOL isIn);
     int a[] = {4,3,5,8,9,6,4,2};
     
     int length =sizeof(a)/sizeof(int);
+    
+
+    int left = 0;
+    int right = length-1;
+    
+    int tmp = a[left];
+    
+    
+    int i = left;//左边的位置
+    int j = right;//右边的位置
+    
+    while (i<j) {
+        
+        //从右往左找大于标准值的，如果找到就往前找
+        while (i<j && a[j]>=tmp) {
+            j--;
+        }
+        //如果找到小于标准值的，放到左边的位置，之后开始从左往右找
+        if(i<j){
+            
+            a[i] = a[j];
+            i++;
+        }
+
+        //找小于标准值的，找到就继续往后找
+        while (i<j && a[i]<tmp) {
+            i++;
+        }
+        //如果找到大于标准值的，就放到当前右边的位置
+        if(i<j){
+            
+            a[j] = a[i];
+            j--;
+        }
+        //一直循环上面的操作，指导i==j，即左右相撞
+        
+    }
+//    将标准值放倒当前相撞的位置
+    a[i] = tmp;
+    
+//    这一次操作之后标准值放到了正确的位置
+    
+//    之后标准值左边的数组和右边的数组递归上面的操作
+    
     
     //冒泡
     //    int aa=0;
@@ -182,36 +239,36 @@ typedef void(^TestBlcok)(BOOL isIn);
     
     
     //折半插入
-    for(int i=1;i<length;i++){
-        
-        int min =0;
-        int max =i-1;
-        
-        int temp=a[i];
-        while (min<=max) {
-            
-            int mid =(min+max)/2;
-            if(a[mid]>temp){
-                
-                max=mid-1;
-                
-            }else if (a[mid]<=temp){
-                
-                min=mid+1;
-                
-            }
-        }
-        
-        for(int j=i;j>min;j--){
-            
-            a[j]=a[j-1];
-        }
-        
-        a[min]=temp;
-        
-        
-        
-    }
+//    for(int i=1;i<length;i++){
+//
+//        int min =0;
+//        int max =length-1;
+//
+//        int temp=a[i];
+//        while (min<=max) {
+//
+//            int mid =(min+max)/2;
+//            if(a[mid]>temp){
+//
+//                max=mid-1;
+//
+//            }else if (a[mid]<=temp){
+//
+//                min=mid+1;
+//
+//            }
+//        }
+//
+//        for(int j=i;j>min;j--){
+//
+//            a[j]=a[j-1];
+//        }
+//
+//        a[min]=temp;
+//
+//
+//
+//    }
     
     //    int num=search(a,length,6);
     

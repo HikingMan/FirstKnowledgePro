@@ -8,7 +8,7 @@
 
 #import "TestSouceOneViewController.h"
 #import <WebKit/WebKit.h>
-//#import "NSURLProtocol+WKPro.h"
+#import "NSURLProtocol+WKPro.h"
 
 @interface TestSouceOneViewController ()<WKNavigationDelegate>
 
@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [NSURLProtocol wk_registerScheme:@"huluxianren"];
+    [NSURLProtocol wk_registerScheme:@"huluxianren"];
     
     [self loadWebView];
     
@@ -46,7 +46,7 @@
     
     NSString *urlStr = @"http://client.treevc.net/assets/html/office/notice.html";
     
-//    urlStr = @"huluxianren://www.baidu.com/";
+    urlStr = @"huluxianren://www.baidu.com/";
     
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:urlStr] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
     

@@ -57,15 +57,15 @@
     NSLog(@"9");
     [super viewDidDisappear:animated];
 }
-- (void)viewLayoutMarginsDidChange{
-    NSLog(@"10");
-    [super viewLayoutMarginsDidChange];
-}
-- (void)viewSafeAreaInsetsDidChange {
-    NSLog(@"11");
-    [super viewSafeAreaInsetsDidChange];
-    
-}
+//- (void)viewLayoutMarginsDidChange{
+//    NSLog(@"10");
+//    [super viewLayoutMarginsDidChange];
+//}
+//- (void)viewSafeAreaInsetsDidChange {
+//    NSLog(@"11");
+//    [super viewSafeAreaInsetsDidChange];
+//    
+//}
 
 - (void)viewDidLoad {
     NSLog(@"5");
